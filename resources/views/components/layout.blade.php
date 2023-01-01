@@ -1,6 +1,6 @@
 <!doctype html>
 
-<title>Laravel From Scratch Blog</title>
+<title>Laravel From Scratch</title>
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
 </style>
 
 <body style="font-family: Open Sans, sans-serif">
-    <section class="px-6 py-8">
+    <section class="px-32 py-12">
         <nav class="md:flex md:justify-between md:items-center">
             <div>
                 <a href="/">
@@ -70,19 +70,19 @@
                     </x-dropdown>
                 @else
                     <a href="/register"
-                       class="text-xs font-bold uppercase {{ request()->is('register') ? 'text-blue-500' : '' }}">
+                       class="bg-blue-500 ml-8 rounded-full text-md font-semibold text-white py-3 px-5 hover:bg-blue-400{{ request()->is('register') ? 'text-blue-500' : '' }}">
                         Register
                     </a>
 
                     <a href="/login"
-                       class="ml-6 text-xs font-bold uppercase {{ request()->is('login') ? 'text-blue-500' : '' }}">
+                       class="bg-blue-500 ml-8 rounded-full text-md font-semibold text-white py-3 px-5 hover:bg-blue-400{{ request()->is('login') ? 'text-blue-500' : '' }}">
                         Log In
                     </a>
                 @endauth
 
                 <a href="#newsletter"
-                   class="bg-blue-500 ml-3 rounded-full text-xs font-semibold text-white uppercase py-3 px-5">
-                    Subscribe for Updates
+                   class="bg-blue-500 ml-8 rounded-full text-md font-semibold text-white py-3 px-5 hover:bg-blue-400">
+                    Subscribe
                 </a>
             </div>
         </nav>
